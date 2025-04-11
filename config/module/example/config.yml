@@ -1,0 +1,15 @@
+LoadIds: [0]
+
+0:
+  name: jack
+  num: 18
+  boolean: true
+  score: 114.514
+  my_score: 3.1415926
+
+1:
+  name: tom
+  num: 17
+  boolean: false
+  score: 514.114
+  my_score: 3.1415926
