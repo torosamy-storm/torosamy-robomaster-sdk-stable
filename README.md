@@ -1,6 +1,5 @@
 # torosamy_robomaster_sdk
 
-## Current version: 2.0
 ## Currently only supports Linux
 
 ### 功能 (Function)
@@ -15,7 +14,7 @@
 ### 未来计划 (Future Plans)
 | Plans   | Finished |
 | ------ | -------- |
-| Detect version updates |         |
+| Auto version updates |         |
 | Integrate the world module with all other modules |          |
 | You are welcome to provide any suggestions |         |
 
