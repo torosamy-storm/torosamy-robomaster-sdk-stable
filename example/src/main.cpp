@@ -3,6 +3,8 @@
 #include "pod/manager/ModuleManager.h"
 #include "pod/manager/SerialPortManager.h"
 #include "pod/manager/CameraManager.h"
+#include "packet/ColorType.h"
+#include "pod/camera/VideoCamera.h"
 #include "example/MyModule.h"
 #include "example/packet/MyReceiveDataPacket.h"
 #include "example/packet/MySendDataPacket.h"
@@ -21,7 +23,10 @@ int main() {
         ->addModules(MyModule::makeModules())
         ->detachTasks();
 
-
+    if (targetColor == ColorType::RED) {
+        std::cout<<"the target color: red"<<std::endl;
+    }
+    
     cv::Mat img;
     std::shared_ptr<VideoCamera> camera = CameraManager::getInstance()->getCameraById<VideoCamera>(0);
     while(true) {

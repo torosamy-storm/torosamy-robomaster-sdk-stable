@@ -7,7 +7,7 @@ namespace Torosamy {
     public:
         VirtualCamera(const YAML::Node& fileReader, const int& id);
         bool updateSrc() override;
-        void openCamera() override;
+        bool openCamera() override;
         void releaseCamera() override;
         // bool cloneSrc(cv::Mat& outSrc) const override;
         bool cloneSrc(cv::Mat& outSrc) override;

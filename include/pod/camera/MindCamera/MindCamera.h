@@ -9,7 +9,7 @@ namespace Torosamy {
     public:
         MindCamera(const YAML::Node& fileReader, const int& id);
         // 启动相机
-        void openCamera() override;
+        bool openCamera() override;
         void releaseCamera() override;
         // bool cloneSrc(cv::Mat& outSrc) const override;
         bool cloneSrc(cv::Mat& outSrc) override;
@@ -18,7 +18,7 @@ namespace Torosamy {
     
     
         // 重启摄像机
-        void restartCamera();
+        bool restartCamera();
         //设置锐度
         bool setSharpness();
         bool setCameraParam();

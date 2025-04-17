@@ -3,10 +3,15 @@
 MyReceiveDataPacket::MyReceiveDataPacket(const int& id):
     ReceiveDataPacketInterface(id){
     this->mSize = 7;
+    initData();
 }
 
 
-
+void MyReceiveDataPacket::initData() {
+    myFloat.f = 0;
+    myNum.s = 0;
+    myBool.b = false;
+}
 
 int MyReceiveDataPacket::readData(const unsigned char* const dataArr,const int& startIndex) {
     int index = 0;

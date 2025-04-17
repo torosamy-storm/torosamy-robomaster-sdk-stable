@@ -19,7 +19,7 @@ namespace Torosamy {
         Camera(const YAML::Node& fileReader, const int& id);
         virtual ~Camera() = default;
         virtual bool updateSrc() = 0;
-        virtual void openCamera() = 0;
+        virtual bool openCamera() = 0;
         virtual void releaseCamera() = 0;
     
         // virtual bool cloneSrc(cv::Mat& outSrc) const = 0;

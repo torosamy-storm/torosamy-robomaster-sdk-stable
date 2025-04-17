@@ -7,7 +7,7 @@
 
 #include "module/TorosamyModule.h"
 #include <memory>
-
+#include <vector>
 class MyModule : public Torosamy::TorosamyModule{
 public:
     MyModule(const int& id);

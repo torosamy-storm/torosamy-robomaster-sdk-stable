@@ -10,7 +10,7 @@ std::vector<int> MyModule::mIds;
 
 
 void MyModule::run() {
-    std::shared_ptr<MyReceiveDataPacket> rPacket = PacketManager::getInstance()->getReceivePacketById<MyReceiveDataPacket>(0);
+    std::shared_ptr<MyReceiveDataPacket> rPacket = Torosamy::PacketManager::getInstance()->getReceivePacketById<MyReceiveDataPacket>(0);
     while (mRunning) {
         std::cout<<rPacket->myNum.s<<std::endl;
         std::cout<<mName<<" "<<mNum<<" "<<mBoolean<<std::endl;

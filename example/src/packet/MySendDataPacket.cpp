@@ -6,6 +6,12 @@
 MySendDataPacket::MySendDataPacket(const int& id):
     SendDataPacketInterface(id) {
     this->mSize = 7;
+    initData();
+}
+void MySendDataPacket::initData() {
+    yourFloat.f = 0;
+    yourNum.s = 0;
+    yourBool.b = false;
 }
 
 
