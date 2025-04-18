@@ -24,6 +24,7 @@ namespace Torosamy {
         bool setCameraParam();
         // 设置曝光时间
         bool setExposureTime() const;
+        bool setExposureValue() const;
         // 设置图像增益
         bool setGain() const;
         // 设置伽马
