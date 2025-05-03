@@ -33,7 +33,7 @@ namespace Torosamy {
         termios mOptions;
         const int mBaudSpeed;
         const int mFd;
-    
+        const std::string mUsbPath;
         std::map<int,std::pair<unsigned char, unsigned char>> mSendSelect;
         class ReceiveOption {
         public:

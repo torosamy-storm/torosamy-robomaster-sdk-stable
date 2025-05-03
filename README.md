@@ -1,6 +1,5 @@
 # torosamy_robomaster_sdk
 
-## Current version: 2.0
 ## Currently only supports Linux
 
 ### 功能 (Function)

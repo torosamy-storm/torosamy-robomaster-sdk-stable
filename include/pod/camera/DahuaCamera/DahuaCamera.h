@@ -9,12 +9,12 @@ namespace Torosamy {
         DahuaCamera(const YAML::Node& fileReader, const int& id);
         bool updateSrc() override;
         bool openCamera() override;
-        void releaseCamera() override;
+        bool releaseCamera() override;
         // bool cloneSrc(cv::Mat& outSrc) const override;
         bool cloneSrc(cv::Mat& outSrc) override;
-        
+        bool checkUSB() const;
         const unsigned char* getBuffer() const;
-        void restartCamera();
+        bool restartCamera();
         bool findDevice();
         bool displayDeviceInfo() const;
         void setCameraIP();
@@ -26,6 +26,8 @@ namespace Torosamy {
         static int getListIndexById(const int& id);
         
     private:
+        const int mBufferWaitTime;
+        const std::string mUsbPath;
         static Dahua::Infra::TVector<Dahua::GenICam::ICameraPtr> mCameraPtrList;
         static std::vector<int> mIds;
         Dahua::GenICam::ICameraPtr mCameraSptr;

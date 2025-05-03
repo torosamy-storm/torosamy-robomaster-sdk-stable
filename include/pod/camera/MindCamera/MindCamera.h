@@ -10,12 +10,12 @@ namespace Torosamy {
         MindCamera(const YAML::Node& fileReader, const int& id);
         // 启动相机
         bool openCamera() override;
-        void releaseCamera() override;
+        bool releaseCamera() override;
         // bool cloneSrc(cv::Mat& outSrc) const override;
         bool cloneSrc(cv::Mat& outSrc) override;
         // 更新现实原始图像
         bool updateSrc() override;
-    
+        bool checkUSB() const;
     
         // 重启摄像机
         bool restartCamera();
@@ -35,6 +35,8 @@ namespace Torosamy {
     
         const unsigned char* getBuffer() const;
     private:
+        const int mBufferWaitTime;
+        const std::string mUsbPath;
         // 曝光时间
         const double mExposureTime;
         // 曝光增益

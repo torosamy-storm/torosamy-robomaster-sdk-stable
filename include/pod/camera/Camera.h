@@ -20,11 +20,12 @@ namespace Torosamy {
         virtual ~Camera() = default;
         virtual bool updateSrc() = 0;
         virtual bool openCamera() = 0;
-        virtual void releaseCamera() = 0;
+        virtual bool releaseCamera() = 0;
     
         // virtual bool cloneSrc(cv::Mat& outSrc) const = 0;
         virtual bool cloneSrc(cv::Mat& outSrc) = 0;
         
+        bool opened() const;
         void stopRunning();
         void startRunning();
         void stopUpdateSrc();
@@ -49,6 +50,7 @@ namespace Torosamy {
     protected:
         std::mutex mBufferMutex;
         const bool mCloneSafe;
+        bool mOpened;
         bool mRunning;
         bool mUpdateEnable;
         const int mId;
