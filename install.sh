@@ -15,9 +15,9 @@ sudo rm -rf /usr/include/CameraStatus.h
 sudo rm -rf /lib/libMVSDK.so
 sudo rm -rf /etc/ld.so.conf/dahua-ld.conf
 
-sudo apt update
-sudo apt install libyaml-cpp-dev -y
-sudo apt-get install curl -y
+# sudo apt update
+# sudo apt install libyaml-cpp-dev -y
+# sudo apt-get install curl -y
 
 # 拷贝相机识别规则
 sudo cp $bin_directory/rules/60-u3v-drv.rules /etc/udev/rules.d
