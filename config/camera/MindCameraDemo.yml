@@ -20,6 +20,7 @@ TimeOff: 1
 Debug: true
 SafeCloneMode: true
 UsbPath: /dev/bus/usb/004/002
+SerialNumber: "114514"
 BufferWaitTime: 1000
 
 #锐度

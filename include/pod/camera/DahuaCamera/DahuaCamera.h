@@ -15,7 +15,6 @@ namespace Torosamy {
         bool checkUSB() const;
         const unsigned char* getBuffer() const;
         bool restartCamera();
-        bool findDevice();
         bool displayDeviceInfo() const;
         void setCameraIP();
         bool setCameraParam();
@@ -24,11 +23,11 @@ namespace Torosamy {
         bool setStreamThread();
         bool setROI(const int64_t& nX, const int64_t& nY, const int64_t& nWidth, const int64_t& nHeight);
         static int getListIndexById(const int& id);
-        
+        static void printAllSn();
     private:
         const int mBufferWaitTime;
         const std::string mUsbPath;
-        static Dahua::Infra::TVector<Dahua::GenICam::ICameraPtr> mCameraPtrList;
+        const std::string mSerialNumber;
         static std::vector<int> mIds;
         Dahua::GenICam::ICameraPtr mCameraSptr;
         Dahua::GenICam::IStreamSourcePtr mImgGetThread;

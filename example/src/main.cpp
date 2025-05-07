@@ -4,12 +4,17 @@
 #include "pod/manager/SerialPortManager.h"
 #include "pod/manager/CameraManager.h"
 #include "packet/ColorType.h"
-#include "pod/camera/VideoCamera.h"
 #include "example/MyModule.h"
 #include "example/packet/MyReceiveDataPacket.h"
 #include "example/packet/MySendDataPacket.h"
+// #include "pod/camera/MindCamera/MindCamera.h"
+// #include "pod/camera/DahuaCamera/DahuaCamera.h"
+#include "pod/camera/VideoCamera.h"
 int main() {
     using namespace Torosamy;
+    // MindCamera::printAllSn();
+    // DahuaCamera::printAllSn();
+
     CameraManager::getInstance()->openCameras();
     CameraManager::getInstance()->startUpdateCameras();
     PacketManager::getInstance()
@@ -19,9 +24,9 @@ int main() {
     SerialPortManager::getInstance()->detachTasks();
 
     
-    // ModuleManager::getInstance()
-    //     ->addModules(MyModule::makeModules())
-    //     ->detachTasks();
+    ModuleManager::getInstance()
+        ->addModules(MyModule::makeModules())
+        ->detachTasks();
 
     if (targetColor == ColorType::RED) {
         std::cout<<"the target color: red"<<std::endl;

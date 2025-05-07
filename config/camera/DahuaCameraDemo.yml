@@ -24,6 +24,8 @@ Debug: true
 SafeCloneMode: true
 UsbPath: /dev/bus/usb/004/002
 BufferWaitTime: 1000
+SerialNumber: "114514"
+
 
 #曝光时间
 Exposure: 3000

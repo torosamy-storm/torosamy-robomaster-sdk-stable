@@ -32,9 +32,10 @@ namespace Torosamy {
         bool setSize();
         bool setFrameSpeed() const;
         static int getListIndexById(const int& id);
-    
+        static void printAllSn();
         const unsigned char* getBuffer() const;
     private:
+        const std::string mSerialNumber;
         const int mBufferWaitTime;
         const std::string mUsbPath;
         // 曝光时间
@@ -53,7 +54,6 @@ namespace Torosamy {
         const int mSharpness;
 
         const int mFrameSpeedInt;
-        int mCameraCountsInt;
         int mChannel;
         // 相机的句柄
         int mCameraHandle;
@@ -68,7 +68,7 @@ namespace Torosamy {
         //IplImage* mIplImage;
     
         tSdkImageResolution mResolution;
-        tSdkCameraDevInfo mCameraList[10];
+        tSdkCameraDevInfo mCameraDeviceInfo;
         tSdkFrameHead mFrameHead;
         // 设备描述信息
         tSdkCameraCapbility mCapability;
